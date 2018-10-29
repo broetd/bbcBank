@@ -1,7 +1,6 @@
 package entity;
 
 import entity.exception.InsufficientFundException;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -21,8 +20,7 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
-@Table(
-        name = "account"
+@Table(name = "account"
 )
 @NamedQueries({@NamedQuery
         (
@@ -117,7 +115,6 @@ public class Account implements Serializable {
 
     @XmlTransient
     public Customer getCustomer() {
-
         return this.customer;
     }
 
@@ -161,3 +158,52 @@ public class Account implements Serializable {
         return this.getBalance();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

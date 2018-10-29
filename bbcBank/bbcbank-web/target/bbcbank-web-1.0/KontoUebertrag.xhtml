@@ -1,12 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title>Konto-Übertrag</title>
-</head>
-<body>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Index</title>
+    <link rel="stylesheet" type="stylesheet" href="resources/css/styles.css"/>
+</h:head>
+<h:body>
+    <div class="ui-g" align="center">
+        <div class="ui-g-4">
+            <h:panelGrid columns="1" cellpadding="2">
+                <p:outputLabel for="konti" value="Gutschriftkonto: "/>
+                <p:selectOneMenu id="konti" required="">
+                    <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
+                    <f:selectItems value="#{bbcBean.test}"/>
+                </p:selectOneMenu>
+            </h:panelGrid>
+        </div>
 
-</body>
+        <div class="ui-g-4"/>
+        <div class="ui-g-4">
+            <h:panelGrid columns="1" cellpadding="2">
+                <p:outputLabel for="konti" value="Belastungskonto: "/>
+                <p:selectOneMenu id="konti2" required="">
+                    <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
+                    <f:selectItems value="#{bbcBean.test}"/>
+                </p:selectOneMenu>
+            </h:panelGrid>
+        </div>
+    </div>
+    <p/>
+    <div class="ui-g" align="center">
+        <div class="ui-g-4"/>
+        <div class="ui-g-4">
+            <p:outputLabel value="Betrag CHF" />
+            <input type="number" name="betrag" min="1" required=""/>
+        </div>
+        <div class="ui-g-4"/>
+    </div>
+    <div>
+        <p/>
+    </div>
+
+    <div class="ui-g" align="center">
+        <div class="ui-g-12">
+            <p:outputLabel id="test" value="Transaktionstext: "/>
+            <p:inputTextarea cols="25" maxlength="100"/>
+        </div>
+    </div>
+</h:body>
 </html>
