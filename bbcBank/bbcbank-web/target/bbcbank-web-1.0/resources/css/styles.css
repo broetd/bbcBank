@@ -1,0 +1,24 @@
+* {
+    font-family: arial, helvetica, sans-serif;
+    font-size: small;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#title {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.radios{
+    width: 100%;
+}
+

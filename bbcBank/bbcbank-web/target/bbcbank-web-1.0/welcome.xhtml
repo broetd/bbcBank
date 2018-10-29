@@ -1,0 +1,29 @@
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="stylesheet" href="resources/css/styles.css"/>
+</h:head>
+<h:body>
+    <div class="ui-g, header">
+        <div class="ui-g-3">
+            <p:graphicImage width="320px" height="213px" value="resources/pictures/CS.png" />
+        </div>
+        <div class="ui-g-3"/>
+        <div class="ui-g-3"/>
+    </div>
+    <div class="ui-g" align="center">
+        <p:outputLabel value="BBC Bank"/>
+
+        <form action="EinAuszahlung.xhtml">
+            <input type="submit" value="Ein- / Auszahlung" />
+        </form>
+        <form action="KontoUebertrag.xhtml">
+            <input type="submit" value="Konto-Übertrag" />
+        </form>
+    </div>
+    <h:outputLabel  value="#{helloWorldBean.greeting}" />
+
+</h:body>
+</html>
