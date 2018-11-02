@@ -2,17 +2,25 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Index</title>
+    <title>Konto-Uebertrag</title>
     <link rel="stylesheet" type="stylesheet" href="resources/css/styles.css"/>
 </h:head>
 <h:body>
+    <div class="ui-g, header" align="center">
+        <div class="ui-g-4">
+            <p:graphicImage width="320px" height="213px" value="resources/pictures/CS.png"/>
+        </div>
+        <div class="ui-g-4" align="center">
+            <p:outputLabel id="title" value="BBC Bank"/>
+        </div>
+    </div>
     <div class="ui-g" align="center">
         <div class="ui-g-4">
             <h:panelGrid columns="1" cellpadding="2">
                 <p:outputLabel for="konti" value="Gutschriftkonto: "/>
                 <p:selectOneMenu id="konti" required="">
                     <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
-                    <f:selectItems value="#{bbcBean.test}"/>
+                    <f:selectItems value="#{bbcBean.customer.accounts}"/>
                 </p:selectOneMenu>
             </h:panelGrid>
         </div>
@@ -23,7 +31,7 @@
                 <p:outputLabel for="konti" value="Belastungskonto: "/>
                 <p:selectOneMenu id="konti2" required="">
                     <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
-                    <f:selectItems value="#{bbcBean.test}"/>
+                    <f:selectItems value="#{bbcBean.customer.accounts}"/>
                 </p:selectOneMenu>
             </h:panelGrid>
         </div>
@@ -32,7 +40,7 @@
     <div class="ui-g" align="center">
         <div class="ui-g-4"/>
         <div class="ui-g-4">
-            <p:outputLabel value="Betrag CHF" />
+            <p:outputLabel value="Betrag CHF"/>
             <input type="number" name="betrag" min="1" required=""/>
         </div>
         <div class="ui-g-4"/>

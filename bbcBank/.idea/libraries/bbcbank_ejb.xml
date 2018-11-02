@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bbcbank-ejb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bbcbank-app/target/bbcbank-app-1.0/bbcbank-ejb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

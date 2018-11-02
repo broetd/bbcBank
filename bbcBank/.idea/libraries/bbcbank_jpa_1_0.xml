@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bbcbank-jpa-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bbcbank-app/target/bbcbank-app-1.0/lib/bbcbank-jpa-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

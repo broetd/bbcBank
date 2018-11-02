@@ -2,18 +2,26 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Index</title>
+    <title>Ein-/Auszahlung</title>
     <link rel="stylesheet" type="stylesheet" href="resources/css/styles.css"/>
 </h:head>
 <h:body>
-    <div class="ui-g, header" align="center">
+    <div class="ui-g, header" align="left">
         <div class="ui-g-4">
             <p:graphicImage width="320px" height="213px" value="resources/pictures/CS.png"/>
         </div>
         <div class="ui-g-4" align="center">
-            <p:outputLabel id="title" value="BBC Bank"/>
+            <p:outputLabel styleClass="title" value="BBC Bank"/>
+            <p/>
         </div>
         <div class="ui-g-4"/>
+    </div>
+    <div align="center">
+        <p:outputLabel id="ha" value="#{bbcBean.customer.title} #{bbcBean.customer.firstName} #{bbcBean.customer.lastName}"/>
+        <p/>
+        <p:outputLabel id="ha1" value="#{bbcBean.customer.street}"/>
+        <p/>
+        <p:outputLabel id="ha2" value="#{bbcBean.customer.zipcode} #{bbcBean.customer.city}"/>
     </div>
     <div class="ui-g" align="center">
         <div class="ui-g-12">
@@ -35,8 +43,8 @@
             <h:panelGrid columns="1" cellpadding="2">
                 <p:outputLabel for="konti" value="Konti: "/>
                 <p:selectOneMenu id="konti" required="">
-                    <f:selectItem itemLabel="Wählen Sie ihr Konto:" itemValue="" noSelectionOption="false"/>
-                    <f:selectItems value="#{bbcBean.test}"/>
+                    <f:selectItem itemLabel="Wählen Sie Ihr Konto:" itemValue="" noSelectionOption="false"/>
+                    <f:selectItems value="#{bbcBean.customer.accounts}" var="a" itemLabel="#{a.iban}" />
                 </p:selectOneMenu>
             </h:panelGrid>
         </div>
@@ -48,8 +56,8 @@
     <div class="ui-g" align="center">
         <div class="ui-g-4"/>
         <div class="ui-g-4">
-            <p:outputLabel value="Betrag CHF" />
-            <input type="number" name="betrag" min="1" required=""/>
+            <p:outputLabel name="betrag" value="Betrag CHF" />
+            <input type="number" name="betrag" value="#{bbcBean.transactionRecord.amount}" required=""/>
         </div>
         <div class="ui-g-4"/>
     </div>
@@ -68,7 +76,7 @@
     </div>
     <div class="ui-g" align="center">
         <form action="">
-            <input type="submit" value="Submit" />
+            <input type="submit" value="#{bbcBean.getAuszahlung}" />
         </form>
     </div>
 </h:body>

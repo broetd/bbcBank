@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bbcbank-web:war">
+    <output-path>$PROJECT_DIR$/bbcbank-web/target</output-path>
+    <root id="archive" name="bbcbank-web-1.0.war">
+      <element id="artifact" artifact-name="bbcbank-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="bbcbank-ejb:ejb">
+    <output-path>$PROJECT_DIR$/bbcbank-ejb/target</output-path>
+    <root id="archive" name="bbcbank-ejb-1.0.jar">
+      <element id="artifact" artifact-name="bbcbank-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>

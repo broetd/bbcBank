@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bbcbank.iml" filepath="$PROJECT_DIR$/bbcbank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbcbank-app/bbcbank-app.iml" filepath="$PROJECT_DIR$/bbcbank-app/bbcbank-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbcbank-ejb/bbcbank-ejb.iml" filepath="$PROJECT_DIR$/bbcbank-ejb/bbcbank-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbcbank-jpa/bbcbank-jpa.iml" filepath="$PROJECT_DIR$/bbcbank-jpa/bbcbank-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbcbank-web/bbcbank-web.iml" filepath="$PROJECT_DIR$/bbcbank-web/bbcbank-web.iml" />
+    </modules>
+  </component>
+</project>

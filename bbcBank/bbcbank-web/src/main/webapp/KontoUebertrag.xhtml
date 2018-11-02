@@ -2,7 +2,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Index</title>
+    <title>Konto-Uebertrag</title>
     <link rel="stylesheet" type="stylesheet" href="resources/css/styles.css"/>
 </h:head>
 <h:body>
@@ -20,7 +20,7 @@
                 <p:outputLabel for="konti" value="Gutschriftkonto: "/>
                 <p:selectOneMenu id="konti" required="">
                     <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
-                    <f:selectItems value="#{bbcBean.test}"/>
+                    <f:selectItems value="#{bbcBean.customer.accounts}"/>
                 </p:selectOneMenu>
             </h:panelGrid>
         </div>
@@ -31,7 +31,7 @@
                 <p:outputLabel for="konti" value="Belastungskonto: "/>
                 <p:selectOneMenu id="konti2" required="">
                     <f:selectItem itemLabel="-" itemValue="" noSelectionOption="false"/>
-                    <f:selectItems value="#{bbcBean.test}"/>
+                    <f:selectItems value="#{bbcBean.customer.accounts}"/>
                 </p:selectOneMenu>
             </h:panelGrid>
         </div>
